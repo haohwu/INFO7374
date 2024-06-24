@@ -35,13 +35,11 @@ def load_data():
 
 data = load_data()
 
-# Function to process input and generate response
 def get_response(query, data):
-    # Assume a function 'classify_intent' and 'extract_keywords' are implemented
     intent = classify_intent(query)
     keywords = extract_keywords(query)
     if intent in data:
-        return data[intent]  # Simplified response logic
+        return data[intent]  
     return "I'm not sure how to answer that, could you ask differently?"
 
 st.title('Toro Restaurant Chatbot')
